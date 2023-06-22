@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./index.css";
+import Dtaes43 from "./pages/DtaesFourThree";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
+import Wings from "./pages/Wings";
+import { createRoot } from "react-dom/client";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import Employees from "./pages/Employees";
+import About from "./pages/About";
+import Error from "./pages/Error";
+import Help from "./pages/Help";
+
+const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Layout>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/section/4-3" element={<Dtaes43 />} />
+          <Route path="/wing/:name" element={<Wings />}></Route>
+          <Route path="/api/attachments/:id" element={<Error />} />
+          <Route path="/Employees" element={<Employees />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Help" element={<Help />} />
+          <Route path="/*" element={<Home />} />
+        </Routes>
+      </Layout>
+    </Router>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
