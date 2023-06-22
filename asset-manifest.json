@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dtaes-client-app/static/css/main.b5c1bcc2.css",
+    "main.js": "/dtaes-client-app/static/js/main.19730f63.js",
+    "index.html": "/dtaes-client-app/index.html",
+    "main.b5c1bcc2.css.map": "/dtaes-client-app/static/css/main.b5c1bcc2.css.map",
+    "main.19730f63.js.map": "/dtaes-client-app/static/js/main.19730f63.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5c1bcc2.css",
+    "static/js/main.19730f63.js"
+  ]
+}
